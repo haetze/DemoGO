@@ -26,7 +26,7 @@ func server(c chan string){
 }
 
 func page12(w http.ResponseWriter, r *http.Request){
-	fmt.Fprintln(w, "welcome to page 12");
+	fmt.Fprintln(w, "welcome to page 12 from git");
 }
 
 func startPage(w http.ResponseWriter, r *http.Request){
