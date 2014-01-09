@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-	"time"
 )
 
 func newFib() func() int {
@@ -17,7 +16,6 @@ func newFib() func() int {
 
 func main() {
 	fib := newFib()
-	t1 := time.Now().UnixNano()
 	a := "40"
 	if len(os.Args) > 1 {
 		a = os.Args[1]
@@ -32,9 +30,6 @@ func main() {
 	for ; i < n; i++ {
 		_ = fib()
 	}
-	//fmt.Println(b);
 
 	fmt.Println(fib())
-	t2 := time.Now().UnixNano()
-	fmt.Println((t2 - t1) / 1000000)
 }
