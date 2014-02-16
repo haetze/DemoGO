@@ -19,8 +19,8 @@ func main(){
 	t := MyT{12, 13};
 	fmt.Println(t);
 	fmt.Println(t.first);
-	//n := Int(12);
-	//fmt.Println(n);
+	n := Int(12);
+	fmt.Println(n);
 	t.change(99);
 	fmt.Println(t);
 }
