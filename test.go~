@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main(){
-	fmt.Println("HELLO\n");
+	ar := Array(2);
+	fmt.Println(ar);
 
 }
 
