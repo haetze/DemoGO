@@ -1,0 +1,16 @@
+git commit -m "OS runtime test Update" -a 
+
+commits changes and adds all added files
+
+git push http://github.com/haetze/DemoGO master
+pushes the file to a git server 
+
+git remote add origin https://github.com/haetze/DemoGO.git
+
+
+git push -u origin master
+
+curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'
+
+# Remember replace USER with your username and REPO with your repository/application name!
+
