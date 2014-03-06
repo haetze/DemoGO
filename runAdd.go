@@ -5,6 +5,9 @@ import (
 	"test"
 )
 
+func sub(a, b int ) int {
+	return test.Add(a, b*-1);
+}
 func main() {
-	fmt.Println(test.Add(12, 13))
+	fmt.Println(sub(12, 13))
 }
