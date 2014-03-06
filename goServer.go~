@@ -44,11 +44,7 @@ func mon(c chan string){
 	}
 }
 
-func add(a,b int)int{
-	return a+b;
-}
 func main(){
-	fmt.Println(add(12,19));
 	fmt.Println("test");
 	c := make(chan string, 100);
 	go server(c);
