@@ -1,9 +1,9 @@
 package goLib
 
-import "fmt";
+import "fmt"
 
-func ForLoop(){
-	for i:=0; i<100; i++{
-		fmt.Println(i);
+func ForLoop() {
+	for i := 0; i < 100; i++ {
+		fmt.Println(i)
 	}
 }

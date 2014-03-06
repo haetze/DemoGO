@@ -1,12 +1,12 @@
-// src in folder goLib can be imported and used 
+// src in folder goLib can be imported and used
 package main
 
-import(
+import (
 	"./goLib"
 	"fmt"
-);
+)
 
-func main(){
-	fmt.Println("test");
-	goLib.ForLoop();
+func main() {
+	fmt.Println("test")
+	goLib.ForLoop()
 }

@@ -1,12 +1,12 @@
 package main
 
-import(
+import (
 	"fmt"
 )
 
-func main(){
-	for i:=0; i<100000; i++{
-		fmt.Println("done");
+func main() {
+	for i := 0; i < 100000; i++ {
+		fmt.Println("done")
 	}
 
 }

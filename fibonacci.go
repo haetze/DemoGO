@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
+	"math/big"
 	"os"
 	"strconv"
-	"math/big"
 )
 
 func newFib() func() *big.Int {
-	a := big.NewInt(0);
-	b := big.NewInt(1);
+	a := big.NewInt(0)
+	b := big.NewInt(1)
 	return (func() *big.Int {
-		a, b = b, a.Add(a, b);
+		a, b = b, a.Add(a, b)
 		return a
 	})
 }

@@ -1,9 +1,11 @@
-package main;
+package main
 
-import ("fmt"
-	"./AdditionalFunctions");
+import (
+	"./AdditionalFunctions"
+	"fmt"
+)
 
-func main(){
-	n := AdditionalFunctions.Add(1,6);
-	fmt.Println(n);
+func main() {
+	n := AdditionalFunctions.Add(1, 6)
+	fmt.Println(n)
 }

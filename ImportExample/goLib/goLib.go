@@ -1,12 +1,11 @@
 package goLib
 
-import "fmt";
+import "fmt"
 
-func main(){
-	fmt.Println("test");
+func main() {
+	fmt.Println("test")
 }
 
-func T(){
-	fmt.Println("t");
+func T() {
+	fmt.Println("t")
 }
-
