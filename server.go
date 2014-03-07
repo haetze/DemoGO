@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"bufio"
 	"net/http"
+	//"io"
 )
 
 type Hello struct {
@@ -13,10 +14,16 @@ type Hello struct {
 func (h *Hello) ServeHTTP(
 	w http.ResponseWriter,
 	r *http.Request) {
-	fmt.Fprint(w, "Hello!")
-	h.count++
-	body, _ := ioutil.ReadAll(r.Body)
-	fmt.Println(string(body))
+		if r.Method == "GET"{
+		h.count++
+		fmt.Fprint(w, h.count)
+	}else{
+		reader := bufio.NewReader(r.Body)
+		str, _ := reader.ReadString('\n')
+		fmt.Println(str)
+		fmt.Fprint(w, h.count)
+	}
+
 }
 func main() {
 	h := Hello{0}
