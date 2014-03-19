@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"bufio"
 	"net/http"
-	//"io"
+	"io"
 )
 
 type Hello struct {
@@ -19,9 +19,11 @@ func (h *Hello) ServeHTTP(
 		fmt.Fprint(w, h.count)
 	}else{
 		reader := bufio.NewReader(r.Body)
-		str, _ := reader.ReadString('\n')
-		fmt.Println(str)
-		fmt.Fprint(w, h.count)
+		str, err := reader.ReadString('\n')
+		if err == io.EOF {
+			fmt.Println(str)
+			fmt.Fprint(w, h.count)
+		}
 	}
 
 }
