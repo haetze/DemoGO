@@ -1,36 +1,35 @@
 package main
 
-import(
+import (
+	"bufio"
 	"fmt"
-	"net/http"
 	"io"
 	"io/ioutil"
-	"bufio"
+	"net/http"
 )
 
-type Responder string;
+type Responder string
 
-func (res Responder) ServeHTTP ( w http.ResponseWriter, r *http.Request){
-	if r.Method == "GET"{
-		fmt.Fprint(w, res);
-		fmt.Println("in the fun");
-	}else{	
-		reader:= bufio.NewReader(r.Body);
-		str, err := reader.ReadString(' ');
-		if err == io.EOF{
-			fmt.Println(str);
-			fmt.Fprint(w, "lappen\n");
+func (res Responder) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	if r.Method == "GET" {
+		fmt.Fprint(w, res)
+		fmt.Println("in the fun")
+	} else {
+		reader := bufio.NewReader(r.Body)
+		str, err := reader.ReadString('\n')
+		if err == io.EOF {
+			fmt.Println(str)
+			fmt.Fprint(w, "lappen\n")
 		}
 	}
 }
 
-func main(){
-	fileString, err :=  ioutil.ReadFile("page.html");
-	if err != nil{
-		return;
+func main() {
+	fileString, err := ioutil.ReadFile("page.html")
+	if err != nil {
+		return
 	}
-	responder :=Responder(fileString);
-	http.Handle("/page", responder);
-	http.ListenAndServe("localhost:4000", nil);
+	responder := Responder(fileString)
+	http.Handle("/page", responder)
+	http.ListenAndServe("localhost:4000", nil)
 }
-
