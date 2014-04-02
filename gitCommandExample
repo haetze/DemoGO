@@ -14,3 +14,6 @@ curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'
 
 # Remember replace USER with your username and REPO with your repository/application name!
 
+
+
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\full|percentage"'
