@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<body>
+	<outline  xmlUrl="http://www.podshow.com/feeds/dailysourcecode.xml" />
+	<outline xmlUrl="http://api.flickr.com/services/feeds/photos_public.gne?tags=green&amp;format=rss_200" />
+	<outline  xmlUrl="http://wir.muessenreden.de/feed/podcast/"  />
+	<outline xmlUrl="http://cre.fm/feed/m4a/" htmlUrl="http://cre.fm" />
+	<outline xmlUrl="http://leoville.tv/podcasts/twig.xml" />
+	<outline xmlUrl="http://fanboys.fm/episodes.page0001.mp3.rss" />
+	<outline  xmlUrl="http://freakshow.fm/feed/m4a/"  />
+	<outline xmlUrl="http://www.bitsundso.de/feed/"  />
+</body>
+</opml>
