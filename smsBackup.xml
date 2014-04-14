@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<?xml-stylesheet type="text/xsl" href="sms.xsl"?>
-<smses count="1503">
+<?xml-stylesheet type="text/xsl" href="sms.xsl" ?>
+<smses count="1503" >
   <sms protocol="0" address="+4915779041426" date="1358180834128" type="1" subject="null" body="Senem und ich schaffen den frühen Bus nicht, deswegen kommen wir 3 bis 5 Minuten später :-) " toa="null" sc_toa="null" service_center="+491770610000" read="1" status="-1" locked="0" date_sent="1358180832000" readable_date="Jan 14, 2013 5:27:14 PM" contact_name="Fine" />
   <sms protocol="0" address="+4915779041426" date="1358191445096" type="1" subject="null" body="Warum warst du nicht da ? :-) " toa="null" sc_toa="null" service_center="+491770610000" read="1" status="-1" locked="0" date_sent="1358191444000" readable_date="Jan 14, 2013 8:24:05 PM" contact_name="Fine" />
   <sms protocol="0" address="+49 157 79041426" date="1358196446314" type="2" subject="null" body="Ich war noch in der schule " toa="null" sc_toa="null" service_center="null" read="1" status="0" locked="0" date_sent="1358228699064" readable_date="Jan 14, 2013 9:47:26 PM" contact_name="Fine" />

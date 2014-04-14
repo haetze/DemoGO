@@ -6,7 +6,7 @@ import (
 )
 
 func main(){
-	data := XMLParse.GetDataFieldFromFile("smsBackup.xml", "body")
+	data := XMLParse.GetDataFieldFromFile("smsBackup.xml", "locked")
 	for _, m :=  range data{
 		fmt.Println(m)
 	}
