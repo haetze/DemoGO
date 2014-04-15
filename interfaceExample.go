@@ -16,11 +16,21 @@ func (d MyInt) test() string{
 	return "test"
 }
 
+func (d MyString) test() string{
+	return "test2"
+}
+
+func  run(d Interface) string{
+	return d.test()
+}
+
 func main(){
 	a := MyInt(9)
-	b := MyString("test")
+	b := MyString("rrrr")
 	c := Interface(a)
+	d := Interface(b)
 	fmt.Println(b)
 	fmt.Println(a)
-	fmt.Println(c)
+	fmt.Println(run(c))
+	fmt.Println(run(d))
 }
