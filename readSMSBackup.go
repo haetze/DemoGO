@@ -6,8 +6,13 @@ import (
 )
 
 func main(){
-	data := XMLParse.FileToMapPreLine("smsBackup.xml")
+	data := XMLParse.FileToMapPreLine("java.xml")
 	for _, m :=  range data{
-		fmt.Println(m["body"])
+		n := m["android:minSdkVersion"]
+		if n == ""{
+			fmt.Println("no field value")
+		}else{
+			fmt.Println(n)
+		}
 	}
 }
