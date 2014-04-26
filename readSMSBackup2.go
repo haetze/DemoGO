@@ -6,8 +6,8 @@ import (
 )
 
 func main(){
-	data := XMLParseCon.GetDataFieldFromFile("smsBackup.xml", "body")
+	data := XMLParseCon.GetFileToMapPreLine("smsBackup.xml")
 	for _, m :=  range data{
-		fmt.Println(m)
+		fmt.Println(m.Content["body"])
 	}
 }
