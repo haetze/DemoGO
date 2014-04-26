@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"XMLParse"
+	"XMLParseCon"
 )
 
 func main(){
-	data := XMLParse.GetDataFieldFromFile("smsBackup.xml", "body")
+	data := XMLParseCon.GetDataFieldFromFile("smsBackup.xml", "body")
 	for _, m :=  range data{
 		fmt.Println(m)
 	}
