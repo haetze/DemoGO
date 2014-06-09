@@ -24,6 +24,8 @@ func (l List) isEqual(l2 List) (bool, error) {
 	}
 }
 
+
+
 func main() {
 	l := List{1, 2, 3, 4, 5, 5, 6, 7}
 	fmt.Println(l.isEqual(List{}))

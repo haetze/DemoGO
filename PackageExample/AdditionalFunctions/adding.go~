@@ -1,0 +1,7 @@
+package  AdditionalFunctions;
+
+
+func int Add( a, b int){
+	return a+b;
+}
+
