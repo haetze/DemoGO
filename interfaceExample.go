@@ -30,8 +30,8 @@ func  run(d Interface) string{
 func main(){
 	a := MyInt{9, 10}
 	b := MyString{"sss", a}
-	//c := Interface(a)
+	c := Interface(b)
 	fmt.Println(b.test())
 	//fmt.Println(a)
-	//fmt.Println(run(c))
+	fmt.Println(run(c))
 }
