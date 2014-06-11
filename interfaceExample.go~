@@ -12,7 +12,11 @@ type MyInt struct {
 	second int
 }
 
-type MyString string
+type MyString struct {
+	str string
+	MyInt
+}
+
 
 func (d MyInt) test() string{
 	return "test"
@@ -25,9 +29,9 @@ func  run(d Interface) string{
 
 func main(){
 	a := MyInt{9, 10}
-	b := MyString("rrrr")
-	c := Interface(a)
-	fmt.Println(b)
-	fmt.Println(a)
-	fmt.Println(run(c))
+	b := MyString{"sss", MyInt{12,21}}
+	//c := Interface(a)
+	fmt.Println(b.first)
+	//fmt.Println(a)
+	//fmt.Println(run(c))
 }
