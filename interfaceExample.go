@@ -32,6 +32,5 @@ func main(){
 	b := MyString{"sss", a}
 	c := Interface(b)
 	fmt.Println(b.test())
-	//fmt.Println(a)
 	fmt.Println(run(c))
 }
