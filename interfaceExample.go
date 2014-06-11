@@ -31,7 +31,7 @@ func main(){
 	a := MyInt{9, 10}
 	b := MyString{"sss", a}
 	//c := Interface(a)
-	fmt.Println(b.first)
+	fmt.Println(b.test)
 	//fmt.Println(a)
 	//fmt.Println(run(c))
 }

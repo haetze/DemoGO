@@ -29,7 +29,7 @@ func  run(d Interface) string{
 
 func main(){
 	a := MyInt{9, 10}
-	b := MyString{"sss", MyInt{12,21}}
+	b := MyString{"sss", a}
 	//c := Interface(a)
 	fmt.Println(b.first)
 	//fmt.Println(a)
