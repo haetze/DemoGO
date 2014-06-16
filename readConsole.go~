@@ -17,7 +17,7 @@ func main (){
 		if err != nil{
 			fmt.Println("I wanted a number !!")
 		}else{
-			fmt.Println(i+1)
+			fmt.Println(i/0)
 		}
 	}
 }
