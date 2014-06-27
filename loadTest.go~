@@ -7,6 +7,7 @@ import(
 
 func main(){
 	a := test.T{}
-	fmt.Println(a.Add());
+	b := a.Add()
+	fmt.Println(b)
 	
 }
