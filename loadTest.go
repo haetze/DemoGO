@@ -8,7 +8,7 @@ import(
 func main(){
 	a := test.T{}
 	a.Add()
-	a.a = a.a+1
+	//a.a = a.a+1 doesn't work .a not exported
 	fmt.Println(a)
 	
 }
