@@ -8,6 +8,6 @@ import(
 func main(){
 	a := test.T{}
 	a.Add()
-	fmt.Println(b)
+	fmt.Println(a)
 	
 }
