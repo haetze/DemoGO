@@ -1,4 +1,4 @@
 go run $1
-if [ "$2" != "" ]; then
+if [ "$2" != "" ] then;
 	./make $1
 fi  
