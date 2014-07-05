@@ -1,17 +1,16 @@
-package main 
+package main
 
-import(
+import (
 	"fmt"
-	"os"
-	"image/jpeg"
 	"image/gif"
+	"image/jpeg"
+	"os"
 )
 
-
-func main(){
-	op := gif.Options{256,nil,nil}
+func main() {
+	op := gif.Options{256, nil, nil}
 	gifWriter, err := os.Create("new.gif")
-	if err != nil{
+	if err != nil {
 		fmt.Println("something went wrong")
 	}
 	image1, _ := os.Open("image1.jpeg")
@@ -22,4 +21,3 @@ func main(){
 	gif.Encode(gifWriter, jpeg2, &op)
 
 }
-

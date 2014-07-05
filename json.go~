@@ -20,6 +20,6 @@ func main(){
 	fmt.Println(string(a))
 	var n Mes
 	json.Unmarshal(a, &n)
-	t := strin(n.Name)
+	t := string(n.Name)
 	fmt.Println(t)
 }
