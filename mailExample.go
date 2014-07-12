@@ -15,7 +15,7 @@ func main() {
 	fmt.Println("aut set up")
 
 	err := smtp.SendMail(
-		"smtp.gmail.com:583",
+		"smtp.gmail.com:587",
 		auth,
 		"richy.sting@gmail.com",
 		[]string{"richy.sting@googlemail.com"},
