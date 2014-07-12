@@ -9,7 +9,7 @@ func main() {
 	auth := smtp.PlainAuth(
 		"",
 		"richy.sting@gmail.com",
-		"V3J2@Quitlam",
+		"V3J2@Coquitlam",
 		"smtp.gmail.com")
 
 	fmt.Println("aut set up")
