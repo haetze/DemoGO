@@ -16,7 +16,7 @@ func main() {
 		auth,
 		"richy.sting@gmail.com",
 		[]string{"richy.sting@googlemail.com"},
-		[]byte{"test test"})
+		[]byte("test test"))
 
 	if err != nil {
 		fmt.Println(err)
