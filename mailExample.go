@@ -41,8 +41,5 @@ func gmailAuth(user User) smtp.Auth {
 
 func gmailSend(user User, to, body string) error {
 	err := smtp.SendMail(user.server+":"+strconv.Itoa(user.port), user.auth, user.email, []string{to}, []byte(body))
-	if err != nil {
-		return err
-	}
-	return nil
+	return err
 }
