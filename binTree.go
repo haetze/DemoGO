@@ -18,6 +18,6 @@ func main(){
 	node2 := Node{}
 	node2.init(32)
 	node.node2 = &node2
-	fmt.Println(node)
+	fmt.Println(node.node2)
 }
 
