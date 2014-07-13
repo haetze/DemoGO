@@ -19,7 +19,7 @@ func main(){
 	a ,_ := json.Marshal(m)
 	fmt.Println(string(a))
 	var n Mes
-	json.Unmarshal([]byte("{\"Name\":"), &n)
-	//t := n.Name
-	fmt.Println(n)
+	json.Unmarshal(n, &n)
+	t := n.Name
+	fmt.Println(t)
 }
