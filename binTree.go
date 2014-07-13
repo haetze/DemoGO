@@ -25,4 +25,4 @@ func main(){
 	fmt.Println(*node.node2)
 	node.node2.val = 34
 	fmt.Println(json.Marshal(node2))
-
+}
