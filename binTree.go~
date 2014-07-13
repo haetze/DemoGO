@@ -4,8 +4,8 @@ import "fmt"
 
 type Node struct{
 	val int
-	node1 Node
-	node2 Node
+	node1 *Node
+	node2 *Node
 }
 
 func (n *Node) init(val int){
