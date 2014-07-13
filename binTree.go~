@@ -25,5 +25,5 @@ func main(){
 	fmt.Println(*node.node2)
 	node.node2.val = 34
 	str, _ := json.Marshal(node2)
-	fmt.Println(str)
+	fmt.Println(string(str))
 }
