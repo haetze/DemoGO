@@ -1,24 +1,22 @@
 package main
 
-import( 
+import (
+	"bufio"
 	"fmt"
 	"os"
-	"bufio"
 	"strconv"
 )
 
-
-func main (){
+func main() {
 	read := bufio.NewReader(os.Stdin)
 	str, er := read.ReadString('\n')
 	if er == nil {
 		n := len(str)
 		i, err := strconv.ParseInt(str[:n-1], 0, 64)
-		if err != nil{
+		if err != nil {
 			fmt.Println("I wanted a number !!")
-		}else{
-			fmt.Println(i/2)
+		} else {
+			fmt.Println(float64(i) / 2)
 		}
 	}
 }
-
