@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	sum := maxSum([]int{1, 3, 20, -9, 4, 3, 13, -9})
+	sum := maxSum([]int{31, 41, 59, 26, -10000, -53, 58, 97, -93, -23, 84})
 	fmt.Println(sum)
 
 }
@@ -16,8 +16,11 @@ func maxSum(x []int) []int {
 	} else if len(x) == 2 {
 	}
 
-	x = shrink(shrink(shrink(x)))
-	//fmt.Println(x)
+	for testEq(x, shrink(x)) {
+		x = shrink(x)
+	}
+	x = dropZero(x)
+	fmt.Println(x)
 	n := findBig(x)
 	big := x[n]
 	x = genNew(x)
@@ -39,6 +42,18 @@ func maxSum(x []int) []int {
 	}
 
 	return x
+}
+
+func testEq(a, b []int) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i := range a {
+		if a[i] != b[i] {
+			return false
+		}
+	}
+	return true
 }
 
 func allSameSign(x []int) bool {
@@ -104,26 +119,14 @@ func genNew(x []int) []int {
 					x[i] = 0
 				}
 			}
-			if (i%2) == 1 && i != 0 {
-				if (x[i] * -1) < x[i-1] {
-					x[i+1] = x[i] + x[i-1]
-					x[i] = 0
-				}
-			}
 		}
 	}
 	if x[0] > 0 {
 		for i := range x {
-			if (i%2) == 0 && i < len(x)-2 {
-				if (x[i+1] * -1) < x[i] {
+			if (i%2) == 0 && i < len(x)-3 {
+				if (x[i+1]*-1 + x[i] + x[i+2]) > 0 {
 					x[i] = x[i] + x[i+1]
 					x[i+1] = 0
-				}
-			}
-			if (i%2) == 0 && i != 0 {
-				if (x[i-1] * -1) < x[i] {
-					x[i] = x[i] + x[i-1]
-					x[i-1] = 0
 				}
 			}
 
