@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	sum := maxSum([]int{31, 41, 59, 26, -10000, -53, 58, 97, -93, -23, 84})
+	sum := maxSum([]int{2, -4, 5})
 	fmt.Println(sum)
 
 }
@@ -113,8 +113,8 @@ func findBig(x []int) int {
 func genNew(x []int) []int {
 	if x[0] < 0 {
 		for i := range x {
-			if (i%2) == 1 && i < len(x)-2 {
-				if (x[i] * -1) < x[i+1] {
+			if (i%2) == 1 && i < len(x)-3 {
+				if (x[i+1]*-1 + x[i] + x[i+2]) > x[1] {
 					x[i+1] = x[i] + x[i+1]
 					x[i] = 0
 				}
@@ -124,7 +124,7 @@ func genNew(x []int) []int {
 	if x[0] > 0 {
 		for i := range x {
 			if (i%2) == 0 && i < len(x)-3 {
-				if (x[i+1]*-1 + x[i] + x[i+2]) > 0 {
+				if (x[i+1]*-1 + x[i] + x[i+2]) > x[1] {
 					x[i] = x[i] + x[i+1]
 					x[i+1] = 0
 				}
