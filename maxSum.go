@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	sum := maxSum([]int{12, -3, -22, 8})
+	sum := maxSum([]int{1, -2, 4, -6, 3})
 	fmt.Println(sum)
 
 }
@@ -24,7 +24,6 @@ func maxSum(x []int) []int {
 	big := x[n]
 	for !(testEq(x, genNew(x))) {
 		x = genNew(x)
-		fmt.Println(x)
 	}
 	x = shrink(x)
 	if allSameSign(x) {
