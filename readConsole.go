@@ -16,7 +16,7 @@ func main() {
 		if err != nil {
 			fmt.Println("I wanted a number !!")
 		} else {
-			fmt.Println(float64(i) / 2)
+			fmt.Println(float64(i) / 3)
 		}
 	}
 }
