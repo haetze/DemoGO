@@ -1,14 +1,14 @@
-package main 
+package main
 
-import(
+import (
 	"fmt"
 	"test"
 )
 
-func main(){
+func main() {
 	a := test.T{}
-	a.Add()
+	a.Add(12)
 	//a.a = a.a+1 doesn't work .a not exported
 	fmt.Println(a)
-	
+
 }
