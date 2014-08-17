@@ -26,7 +26,7 @@ func main() {
 	err2 := dec.Decode(&s)
 
 	if err2 != nil {
-		fmt.Println(err)
+		fmt.Println(err2)
 	}
 
 	fmt.Println(s)
