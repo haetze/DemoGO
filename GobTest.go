@@ -21,7 +21,7 @@ func main() {
 	var s Q
 	b, _ := ioutil.ReadFile("gobEx")
 	pipe = *bytes.NewBuffer(b)
-	fmt.Println(pipe)
+	//fmt.Println(pipe)
 	dec := gob.NewDecoder(&pipe)
 	err2 := dec.Decode(&s)
 
