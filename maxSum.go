@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	sum := maxSum([]int{1, -2, 4, -6, 3})
+	sum := maxSum([]int{1, -2, 4, -6, 3 })
 	fmt.Println(sum)
 
 }
