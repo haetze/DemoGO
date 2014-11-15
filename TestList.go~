@@ -1,9 +1,6 @@
 package main
 
-import (
-	"GolangList"
-	"fmt"
-)
+import "fmt"
 
 type Type struct {
 	key int
