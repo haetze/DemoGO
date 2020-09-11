@@ -112,12 +112,13 @@ func call_print(c [size][size]chan int) {
 	}
 }
 
-func call_end(c [size][size]chan int) {
+func call_end(c [size][size]chan int, end_c chan bool) {
 	for i := 0; i < size; i++ {
 		for j := 0; j < size; j++{
 			c[i][j] <- end
 		}
 	}
+	wait_for_end(end_c)
 }
 
 func wait_for_end(c chan bool) {
@@ -155,7 +156,14 @@ func main() {
 	call_next(caller)
 	fmt.Println("==================")
 	call_print(caller)
-	call_end(caller)
-	wait_for_end(end_c)
-
+	call_next(caller)
+	fmt.Println("==================")
+	call_print(caller)
+	call_next(caller)
+	fmt.Println("==================")
+	call_print(caller)
+	call_next(caller)
+	fmt.Println("==================")
+	call_print(caller)
+	call_end(caller,end_c)
 }
